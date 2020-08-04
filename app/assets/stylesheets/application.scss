@@ -1,0 +1,10 @@
+@import "bootstrap/scss/bootstrap";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-group {
+  padding-bottom: 20px;
+}
