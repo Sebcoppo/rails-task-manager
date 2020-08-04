@@ -1,0 +1,14 @@
+<h1> My Tasks</h1>
+
+<ul class="list-group">
+  <% @tasks.each do |task| %>
+    <li>
+      <div class="custom-control custom-checkbox">
+       <!--  <input class="custom-control-input" id="task" type="checkbox"> -->
+        <%= task.completed ? "☑️" : "◻️" %> <%=link_to task.title, task_path(task) %> &nbsp <%= link_to "🗑", task_path(task), method: :delete, data: { confirm: "Delete #{task.title}?" } %>
+      </div>
+     </li>
+  <% end %>
+</ul>
+
+<%=  link_to "Add a task", tasks_new_path %>
